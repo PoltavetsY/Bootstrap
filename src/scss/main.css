@@ -1,0 +1,300 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin: 0 0 1em 0;
+}
+
+h2, h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+h3 {
+  font-size: .7rem;
+}
+
+p {
+  color: #808182;
+}
+
+img {
+  position: relative;
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input, textarea {
+  border: none;
+}
+
+label {
+  padding: 1.25em;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 3.5em;
+  padding: 0 1em;
+  width: 100%;
+  background-color: #1f2224;
+  z-index: 200;
+  letter-spacing: .1em;
+}
+
+h1 {
+  margin: 2px 0 0 0;
+  font-size: .9rem;
+  font-weight: lighter;
+}
+
+.btn-about {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #6A6A6C;
+}
+.btn-about:hover {
+  color: #6A6A6C;
+  cursor: pointer;
+}
+
+.text {
+  font-weight: lighter;
+  font-size: .9rem;
+  color: #ffffff;
+}
+
+.fas {
+  color: #505051;
+}
+
+.link {
+  color: #808182;
+}
+.link:hover {
+  color: #808182;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: fixed;
+  top: 3em;
+  padding: 3em 3em 1em 3em;
+  max-height: calc(80vh - 4em);
+  background-color: rgba(36, 39, 42, 0.98);
+  transform: translateY(-500%);
+  overflow-y: auto;
+  transition: transform 1s ease-in-out;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.half-width {
+  width: 100%;
+}
+
+.social {
+  margin: 2em 0 2em 0;
+}
+
+.social a {
+  padding-left: 1em;
+}
+.social a:hover .fab {
+  color: #34A58E;
+}
+
+.fab {
+  color: #505051;
+  font-size: 1.5em;
+}
+
+.field-half {
+  display: inline-block;
+  padding-left: 1.5em;
+  width: 49.6%;
+}
+.field-half:first-child {
+  padding-left: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 1em;
+  width: 100%;
+  background-color: #34363B;
+  outline-color: #34A58E;
+  color: #808182;
+}
+
+input {
+  height: 3em;
+}
+
+.field {
+  padding-top: 1.5em;
+}
+
+.copyright {
+  margin-bottom: 2em;
+  letter-spacing: 0.025em;
+  font-size: 0.8em;
+}
+
+.links {
+  color: #808182;
+  border-bottom: 1px dashed #808182;
+}
+.links:hover {
+  color: #34A58E;
+  border-bottom: none;
+}
+
+.button {
+  margin-bottom: 3em;
+  padding-top: 1.5em;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin-right: 1em;
+  padding: 0 2.5em;
+  font-size: 0.9em;
+  font-weight: 300;
+  height: 3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 1s ease;
+}
+
+input[type="submit"] {
+  background-color: #34A58E;
+}
+input[type="submit"]:hover {
+  background-color: #62CEB8;
+}
+
+input[type="reset"] {
+  background-color: rgba(36, 39, 42, 0.98);
+  border: 2px solid #34363B;
+}
+input[type="reset"]:hover {
+  border-color: #34A58E;
+  color: #34A58E;
+}
+
+main {
+  transition: all 1s;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+h3 {
+  position: absolute;
+  bottom: .8rem;
+  left: 2.5rem;
+}
+
+#check:checked ~ footer {
+  transform: translateY(1px);
+}
+
+#check:checked ~ main {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#check:checked ~ header nav label {
+  background-color: rgba(36, 39, 42, 0.98);
+}
+
+@media (min-width: 576px) {
+  header {
+    bottom: -1em;
+    top: auto;
+    height: 5em;
+    padding: 0 1.5em;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .btn-close {
+    font-size: 1.25em;
+  }
+
+  label {
+    padding: 1.5em;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: fixed;
+    top: initial;
+    bottom: 4em;
+    transform: translateY(500%);
+  }
+}
+@media (min-width: 769px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    top: initial;
+    position: fixed;
+    bottom: 4em;
+    transform: translateY(500%);
+  }
+
+  .field-half,
+  .half-width {
+    width: 49%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

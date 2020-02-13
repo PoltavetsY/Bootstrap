@@ -1,0 +1,120 @@
+footer {
+  @include flex(column, flex-start, stretch);
+  position: fixed;
+  top: 3em;
+  padding: 3em 3em 1em 3em;
+  max-height: calc(80vh - 4em);
+  background-color: $submenu;
+  transform: translateY(-500%);
+  overflow-y: auto;
+  transition: transform 1s ease-in-out;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.half-width {
+  width: 100%;
+}
+
+.social {
+  margin: 2em 0;
+}
+
+.social a {
+  padding-left: 1em;
+  &:hover .fab {
+    color: $btn-color;
+  }
+}
+
+.fab {
+  color: $info-color;
+  font-size: 1.5em;
+}
+
+.field-half{
+  display: inline-block;
+  padding: 1.5em 0 0 0;
+  width: 100%
+}
+
+fieldset {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+input[type="text"], 
+input[type="email"],
+textarea {
+  padding: 1em;
+  width: 100%;
+  background-color: $input-area-color;
+  outline-color: $btn-color;
+  color: $p-color;
+}
+
+input {
+  height: 3em; 
+}
+
+.field {
+  padding-top: 1.5em;
+}
+
+.copyright {
+  margin-bottom: 2em;
+  letter-spacing: 0.025em;
+  font-size: 0.8em;
+}
+
+.links{
+  color: $p-color;
+  border-bottom: 1px dashed $p-color;
+  &:hover {
+    color: $btn-color;
+    border-bottom: none;
+  }
+}
+
+.button {
+  margin-bottom: 3em;
+  padding-top: 1.5em;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin-right: 1em;
+  padding: 0 2.5em;
+  font-size: 0.9em;
+  font-weight: 300;
+  height: 3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $no-color;
+  transition: all 1s ease;
+}
+
+input[type="submit"] {
+  background-color: $btn-color;
+  &:hover {
+    background-color: $btn-hover;
+  }
+}
+
+input[type="reset"] {
+  background-color: $submenu;
+  border: 2px solid $input-area-color;
+  &:hover {
+    border-color: $btn-color;
+    color: $btn-color;
+  }
+}

@@ -1,0 +1,95 @@
+@import '_vars';
+@import '_base';
+@import '_mixin';
+@import '_navigation';
+@import '_submenu';
+
+main {
+  transition: all 1s; 
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+h3 {
+  position: absolute;
+  bottom: .8rem;
+  left: 2.5rem;
+}
+
+#check:checked ~ footer {
+  transform: translateY(1px);
+}
+
+#check:checked ~ main {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#check:checked ~ header nav label{
+  background-color: $submenu;
+}
+
+@media (min-width: 576px) {
+  header {
+    bottom: -1em;
+    top: auto;
+    height: 5em;
+    padding-left: 1.5em;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .btn-close {
+    font-size: 1.25em;
+  }
+  label {
+    padding: 1.5em;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  footer {
+    @include flex(column, flex-start, stretch);
+    position: fixed;
+    top: initial;
+    bottom: 4em;
+    transform: translateY(500%);
+  }
+  .field-half {
+    padding: 1.5em 0 0 1.5em;
+    width: 49.6%;
+  }
+  fieldset {
+    right: 1.5em;
+    width: calc(100% + 1.5em);
+  }
+}
+
+@media (min-width: 769px) {
+  footer {
+    @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    top: initial;
+    position: fixed;
+    bottom: 4em;
+    transform: translateY(500%);
+  }
+  .field-half {
+    padding: 1.5em 0 0 1.5em;
+    width: 49.5%;
+  }
+  fieldset {
+    right: 1.5em;
+    width: calc(100% + 1.5em);
+  }
+  .half-width {
+    width: 49.6%;
+  }
+}

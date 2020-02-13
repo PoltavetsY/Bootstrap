@@ -1,0 +1,44 @@
+header {
+  @include flex(row,space-between,center);
+  position: fixed;
+  top: 0;
+  height: 3.5em;
+  padding-left: 1em;
+  width: 100%;
+  background-color: $menu-color;
+  z-index: 200;
+  letter-spacing: .1em;
+}
+
+h1{
+  margin: 2px 0 0 0;
+  font-size: .9rem;
+  font-weight: lighter;
+}
+
+.btn-about{
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: $social-color;
+  &:hover {
+    color: $social-color;
+    cursor: pointer;
+  }
+}
+
+.text {
+  font-weight: lighter;
+  font-size: .9rem;
+  color: $no-color;
+}
+
+.fas {
+  color: $info-color;
+}
+ 
+.link {
+  color: $p-color;
+  &:hover {
+    color: $p-color;
+  };
+}

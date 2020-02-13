@@ -1,0 +1,47 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container-fluid {
+  padding: 0;  
+}
+
+h2 {
+	font-size: 1.25em;
+	margin: 0 0 1em 0;
+}
+
+h2, h3 {
+	color: $no-color;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+h3 {
+	font-size: .7rem;
+}
+
+p {
+	color: $p-color;
+}
+
+img {
+  position: relative;
+  width: 100%;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+input, textarea, fieldset {
+	border: none;
+}
+
+label {
+	padding: 1.25em;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
